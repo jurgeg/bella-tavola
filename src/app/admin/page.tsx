@@ -326,7 +326,7 @@ export default function AdminPage() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
           {[
             { label: "Today's Bookings", value: todayBookings.length, sub: `${confirmedToday} confirmed`, accent: true },
-            { label: 'Covers Today', value: totalCoversToday, sub: `of ${RESTAURANT.totalCovers || 45} capacity`, accent: false },
+            { label: 'Covers Today', value: totalCoversToday, sub: `of 45 capacity`, accent: false },
             { label: 'This Week', value: upcomingBookings.length, sub: `${thisWeekCovers} covers`, accent: false },
             { label: 'No-Shows (30d)', value: bookings.filter(b => b.status === 'no-show').length, sub: 'track rate', accent: false },
             { label: 'Avg Party Size', value: bookings.length > 0 ? (bookings.reduce((s, b) => s + b.party_size, 0) / bookings.length).toFixed(1) : '0', sub: 'all time', accent: false },
