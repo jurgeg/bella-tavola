@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import DemoBanner from '@/components/DemoBanner';
 
 export const metadata: Metadata = {
   title: 'Bella Tavola — Authentic Italian, Reimagined',
@@ -61,7 +62,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
       </head>
-      <body className="bg-bg text-text antialiased">{children}</body>
+      <body className="bg-bg text-text antialiased" style={{ paddingBottom: '60px' }}>
+        {children}
+        <DemoBanner />
+      </body>
     </html>
   );
 }
